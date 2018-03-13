@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-const Intro = styled.p`
+const Section = styled.section`
   font-size: large;
 `
 
-export default Intro;
+export default Section;
