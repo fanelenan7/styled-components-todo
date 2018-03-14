@@ -18,6 +18,7 @@ class App extends Component {
     this.state = {
       input: '',
       todos: [],
+      checked: [],
     };
   }
 
@@ -37,6 +38,31 @@ class App extends Component {
     }
   }
 
+  handleCheck(e) {
+    if (e.target.checked && !this.state.checked.includes(e.target.value)) {
+      this.setState({
+        checked: [...this.state.checked, e.target.value],
+      })
+    }
+    if (this.state.checked.includes(e.target.value)) {
+      const unchecked = this.state.checked.filter((todos) => {
+        return todos !== e.target.value
+      })
+      this.setState({
+        checked: unchecked,
+      })
+    }
+  }
+
+  handleDelete(e) {
+    e.preventDefault();
+    const newList = this.state.todos.filter(todo => !this.state.checked.includes(todo));
+    this.setState({
+      todos: newList,
+      checked: [],
+    })
+  }
+
   render() {
     return (
       <Main>
@@ -49,7 +75,12 @@ class App extends Component {
             <TextInput onChange={e => this.handleInput(e)} value={this.state.input} />
             <Submit onClick={e => this.handleSubmit(e)} value="Add Todo" />
           </Form>
-          <TodoList todos={this.state.todos} />
+          <TodoList
+            todos={this.state.todos}
+            checked={this.state.checked}
+            handleCheck={e => this.handleCheck(e)}
+            handleDelete={e => this.handleDelete(e)}
+          />
         </Section>
       </Main>
     );
