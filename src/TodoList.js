@@ -10,12 +10,10 @@ import Submit from './styled/Submit';
 export default class TodoList extends Component {
   render() {
   const todos = this.props.todos;
-  const checked = this.props.checked;
   const mappedTodos = todos.map((todo, key) => {
     return (
-      <Label key={key} htmlFor={`checkbox-id-${key}`}>
+      <Label key={`${todo}-${key}`} htmlFor={`checkbox-id-${key}`}>
         <Checkbox
-          // checked={this.props.checked.length > 0 && this.props.checked.includes(todo) ? 'false' : 'true'}
           onChange={e => this.props.handleCheck(e)}
           type="checkbox" id={`checkbox-id-${key}`}
           value={todo}

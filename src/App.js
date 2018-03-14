@@ -68,7 +68,7 @@ class App extends Component {
       <Main>
         <Header>
           <Title>Todos</Title>
-          <Subtitle>with &lt; 💅 &gt; <Link href="https://www.styled-components.com/">styled-components</Link></Subtitle>
+          <Subtitle>with &lt; <span role="img" aria-label="Nail Polish Emoji">💅</span> &gt; <Link href="https://www.styled-components.com/">styled-components</Link></Subtitle>
         </Header>
         <Section>
           <Form>
@@ -77,7 +77,6 @@ class App extends Component {
           </Form>
           <TodoList
             todos={this.state.todos}
-            checked={this.state.checked}
             handleCheck={e => this.handleCheck(e)}
             handleDelete={e => this.handleDelete(e)}
           />
