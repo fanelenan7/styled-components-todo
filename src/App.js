@@ -39,7 +39,7 @@ class App extends Component {
     return (
       <Main>
         <Header>
-          <Title>Todo</Title>
+          <Title>Todos</Title>
         </Header>
         <Section>
           <Form>
