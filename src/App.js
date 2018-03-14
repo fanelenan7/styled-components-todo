@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+
+import TodoList from './TodoList';
+
 import Header from './styled/Header';
 import Main from './styled/Main';
 import Section from './styled/Section';
@@ -37,14 +40,9 @@ class App extends Component {
         <Section>
           <Form>
             <input type="text" onChange={e => this.handleInput(e)} value={this.state.input} />
-            <input type="submit" onSubmit={e => this.handleSubmit(e)} value="Add Todo" />
+            <input type="submit" onClick={e => this.handleSubmit(e)} value="Add Todo" />
           </Form>
-          <Form>
-            <label htmlFor="checkbox-id-1">
-              <input id="checkbox-id-1" type="checkbox" />
-              I'm a todo.
-            </label>
-          </Form>
+          <TodoList todos={this.state.todos} />
         </Section>
       </Main>
     );
