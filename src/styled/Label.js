@@ -7,6 +7,10 @@ import Span from './Span';
 const Label = styled.label`
   display: flex;
   align-items: center;
+  margin: 10px 0;
+  height: 100%;
+  width: 100%;
+  border-bottom: 1px solid #b4b4b4;
   ${Checkbox}:checked ~ ${CustomCheckbox} {
     background-color: dodgerblue;
   }

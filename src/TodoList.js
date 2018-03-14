@@ -19,7 +19,7 @@ export default class TodoList extends Component {
     );
   });
     return (
-      <Form>
+      <Form todos>
         {mappedTodos}
       </Form>
     );

@@ -5,7 +5,7 @@ const CustomCheckbox = styled.div`
   height: 10px;
   border: 2px solid dodgerblue;
   border-radius: 50%;
-  margin-right: 5px;
+  margin-right: 10px;
   transition: 0.2s ease;
 `
 
