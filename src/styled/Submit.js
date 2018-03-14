@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
-const Checkbox = styled.input.attrs({
-  type: 'checkbox',
-})
+const Submit = styled.input.attrs({
+  type: 'submit',
+})`
+  display: block;
+`
 
-export default Checkbox;
+export default Submit;

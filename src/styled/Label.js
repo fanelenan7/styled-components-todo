@@ -13,6 +13,7 @@ const Label = styled.label`
   ${Checkbox}:checked ~ ${Span} {
     text-decoration: line-through;
     text-decoration-color: dodgerblue;
+    color: #b4b4b4;
   }
 `
 
