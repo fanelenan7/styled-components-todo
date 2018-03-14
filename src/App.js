@@ -9,6 +9,8 @@ import Title from './styled/Title';
 import Form from './styled/Form';
 import TextInput from './styled/TextInput';
 import Submit from './styled/Submit';
+import Subtitle from './styled/Subtitle';
+import Link from './styled/Link';
 
 class App extends Component {
   constructor() {
@@ -40,6 +42,7 @@ class App extends Component {
       <Main>
         <Header>
           <Title>Todos</Title>
+          <Subtitle>with &lt; 💅 &gt; <Link href="https://www.styled-components.com/">styled-components</Link></Subtitle>
         </Header>
         <Section>
           <Form>
